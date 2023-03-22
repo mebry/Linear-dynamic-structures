@@ -23,11 +23,13 @@ class LinkedList:
                 cur_node = self.head
                 self.head = cur_node.next
                 return
+
             elif count + 1 == index:
                 the_node_to_remove = cur_node.next
                 the_node_after_removed = the_node_to_remove.next
                 cur_node.next=the_node_after_removed
                 return
+
             count += 1
             cur_node = cur_node.next
 
