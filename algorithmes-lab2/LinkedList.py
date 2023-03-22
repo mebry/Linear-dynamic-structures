@@ -8,13 +8,16 @@ class LinkedList:
         self.head = None
 
     def add(self, data):
+
         new_node = Node(data)
         new_node.next = self.head
         self.head = new_node
 
     def remove(self, index):
+
         cur_node = self.head
         count = 0
+
         while cur_node.next != None:
             if index == 0:
                 cur_node = self.head
@@ -33,6 +36,14 @@ class LinkedList:
         while current_node != None:
             print(current_node.data)
             current_node = current_node.next
+
+    def contains(self,key):  
+       current_node=self.head  
+       while current_node!=None:  
+           if current_node.data==key:  
+               return True  
+           current_node=current_node.next  
+       return False
 
     def sort(self):
         while True:
